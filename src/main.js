@@ -1,29 +1,29 @@
-import { createApp } from 'vue'
-import App from './App.vue'
+import { createApp } from "vue";
+import App from "./App.vue";
 
 // 全局样式
-import 'styles/index.scss'
-import 'sx-common-css/index.scss'
+import "styles/index.scss";
+import "sx-common-css/index.scss";
 
 // A modern alternative to CSS resets
-import 'normalize.css/normalize.css'
+import "normalize.css/normalize.css";
 
 // element-plus
-import elementPlus from 'plugins/element-plus'
+import elementPlus from "plugins/element-plus";
 // import element3 from "plugins/element3";
 
 // router
-import router from '@/router/index'
+import router from "@/router/index";
 
 // 路由权限
-import './permission'
+import "./permission";
 
 // store
-import store from '@/store'
+import store from "@/store";
 
 window.app = createApp(App)
-  .use(elementPlus)
-  // .use(element3)
-  .use(router)
-  .use(store)
-  .mount('#app')
+.use(elementPlus)
+// .use(element3)
+.use(router)
+.use(store)
+.mount("#app");
