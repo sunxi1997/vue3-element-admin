@@ -7,7 +7,6 @@ $colors: (
   success: $color-success,
   danger: $color-danger,
   info: $color-info,
-
   white: #ffffff,
 );
 
@@ -16,4 +15,8 @@ $colors: (
   .text-#{ "" + $key } {
     color: $value;
   }
+}
+
+a {
+  text-decoration: none;
 }

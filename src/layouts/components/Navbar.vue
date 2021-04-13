@@ -17,8 +17,12 @@
 
         <template #dropdown>
           <el-dropdown-menu class="user-dropdown">
-            <el-dropdown-item> 首页</el-dropdown-item>
+            <router-link to="/">
+              <el-dropdown-item> 首页</el-dropdown-item>
+            </router-link>
+            <a target="_blank" href="https://github.com/sunxi1997/vue3-element-admin">
             <el-dropdown-item>我的Github</el-dropdown-item>
+            </a>
           </el-dropdown-menu>
         </template>
       </el-dropdown>
