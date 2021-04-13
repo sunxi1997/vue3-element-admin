@@ -1,0 +1,27 @@
+/**
+ * 自由定制 element 主题色, 字体大小等
+ * 文档说明:
+ * https://element.eleme.cn/#/zh-CN/component/custom-theme
+ * 在线主题生成工具:
+ * https://element.eleme.cn/#/zh-CN/theme
+ */
+
+@import 'src/styles/variables.module';
+
+$--color-primary: $color-primary;
+$--color-success: $color-success;
+$--color-warning: $color-warning;
+$--color-danger: $color-danger;
+$--color-info: $color-info;
+
+$--font-size-extra-small: $font-extra-small;
+$--font-size-small: $font-small;
+$--font-size-base: $font-base;
+$--font-size-medium: $font-medium;
+$--font-size-large: $font-large;
+$--font-size-extra-large: $font-extra-large;
+
+/* 改变 icon 字体路径变量，必需 */
+$--font-path: "node_modules/element-plus/lib/theme-chalk/fonts";
+
+@import "node_modules/element-plus/packages/theme-chalk/src/index";

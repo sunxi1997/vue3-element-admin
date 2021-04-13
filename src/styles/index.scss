@@ -1,0 +1,19 @@
+@import "./variables.module.scss";
+
+// 主题颜色类
+$colors: (
+  primary: $color-primary,
+  warning: $color-warning,
+  success: $color-success,
+  danger: $color-danger,
+  info: $color-info,
+
+  white: #ffffff,
+);
+
+@each $key, $value in $colors {
+  //  颜色类 text-primary
+  .text-#{ "" + $key } {
+    color: $value;
+  }
+}
