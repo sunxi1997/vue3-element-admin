@@ -1,6 +1,5 @@
 <template>
   <div class="navbar w-100 flex flex-x-between">
-
     <div class="flex flex-y-center">
       <hamburger :is-active="opened" class="hamburger-container" @toggleClick="toggleSideBar" />
       <!-- 面包屑 -->
@@ -21,7 +20,7 @@
               <el-dropdown-item> 首页</el-dropdown-item>
             </router-link>
             <a target="_blank" href="https://github.com/sunxi1997/vue3-element-admin">
-            <el-dropdown-item>我的Github</el-dropdown-item>
+              <el-dropdown-item>我的Github</el-dropdown-item>
             </a>
           </el-dropdown-menu>
         </template>
@@ -30,28 +29,29 @@
   </div>
 </template>
 <script>
-import Breadcrumb from "./Breadcrumb.vue";
-import Hamburger from "layouts/components/Hamburger.vue";
-import { useStore } from "vuex";
-import { computed } from "vue";
+import Breadcrumb from './Breadcrumb.vue'
+import Hamburger from 'layouts/components/Hamburger.vue'
+import { useStore } from 'vuex'
+import { computed } from 'vue'
 
 export default {
   components: {
     Breadcrumb,
-    Hamburger,
+    Hamburger
   },
   setup() {
-    const store = useStore();
-    const opened = computed(() => store.state.app.sidebarOpened);
-    const toggleSideBar = () => store.dispatch("app/toggleSideBar");
+    const store = useStore()
+    const opened = computed(() => store.state.app.sidebarOpened)
+    const toggleSideBar = () => store.dispatch('app/toggleSideBar')
     return {
-      opened, toggleSideBar() {
-        console.log("toggle");
-        toggleSideBar();
-      },
-    };
-  },
-};
+      opened,
+      toggleSideBar() {
+        console.log('toggle')
+        toggleSideBar()
+      }
+    }
+  }
+}
 </script>
 
 <style lang="scss" scoped>
@@ -60,7 +60,6 @@ export default {
   position: relative;
   background: #fff;
   box-shadow: 0 1px 4px rgba(0, 21, 41, 0.08);
-
 
   .right-menu {
     height: 100%;

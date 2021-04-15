@@ -1,25 +1,22 @@
 <template>
   <el-main>
     <!-- 内部应该显示子路由页面信息 -->
-    <router-view v-slot="{ Component }" :key="key">
-      <component :is="Component" />
-    </router-view>
+    <router-view :key="key" />
   </el-main>
 
-  <section class="app-main">
-
-  </section>
+  <section class="app-main"></section>
 </template>
 
 <script>
 import { useRoute } from 'vue-router'
+
 export default {
-  name: "AppMain",
-  setup(){
+  name: 'AppMain',
+  setup() {
     const { path: key } = useRoute()
     return { key }
   }
-};
+}
 </script>
 
 <style scoped>

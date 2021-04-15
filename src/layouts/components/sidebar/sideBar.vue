@@ -1,5 +1,5 @@
 <template>
-  <el-aside :width="variables.sideBarWidth" class="sidebar" :class="{hideSidebar: opened}">
+  <el-aside :width="variables.sideBarWidth" class="sidebar" :class="{ hideSidebar: opened }">
     <el-menu
       class="w-100 h-100"
       :default-active="activeMenu"
@@ -20,33 +20,33 @@
 </template>
 
 <script>
-import { defineComponent, computed } from "vue";
-import { useRoute } from "vue-router";
-import SideBarItem from "./sideBarItem.vue";
-import routes from "@/router/routes";
-import variables from "styles/variables.module.scss";
-import { useStore } from "vuex";
+import { defineComponent, computed } from 'vue'
+import { useRoute } from 'vue-router'
+import SideBarItem from './sideBarItem.vue'
+import routes from '@/router/routes'
+import variables from 'styles/variables.module.scss'
+import { useStore } from 'vuex'
 
 export default defineComponent({
-  name: "SideBar",
+  name: 'SideBar',
   components: {
-    SideBarItem,
+    SideBarItem
   },
   setup() {
-    const route = useRoute();
-    const store = useStore();
-    const opened = computed(() => store.state.app.sidebarOpened);
-    const activeMenu = computed(() => route.meta?.activeMenu || route.path);
+    const route = useRoute()
+    const store = useStore()
+    const opened = computed(() => store.state.app.sidebarOpened)
+    const activeMenu = computed(() => route.meta?.activeMenu || route.path)
 
     return {
       opened,
       variables,
       isCollapse: false,
       routes,
-      activeMenu,
-    };
-  },
-});
+      activeMenu
+    }
+  }
+})
 </script>
 
 <style scoped lang="scss">
@@ -55,11 +55,10 @@ export default defineComponent({
 }
 
 .sidebar {
-  transition: width .28s ease-in-out;
+  transition: width 0.28s ease-in-out;
 
   &.hideSidebar {
     width: 54px !important;
   }
 }
-
 </style>

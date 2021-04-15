@@ -10,23 +10,22 @@
       </el-header>
       <!-- 内容区 -->
       <app-main />
-
     </el-container>
   </el-container>
 </template>
 
 <script>
-import AppMain from "./components/AppMain.vue";
-import Navbar from "./components/Navbar.vue";
-import sidebar from "./components/sidebar/sideBar.vue";
+import AppMain from './components/AppMain.vue'
+import Navbar from './components/Navbar.vue'
+import sidebar from './components/sidebar/sideBar.vue'
 
 export default {
   components: {
     AppMain,
     Navbar,
-    sidebar,
-  },
-};
+    sidebar
+  }
+}
 </script>
 
 <style lang="scss" scoped>

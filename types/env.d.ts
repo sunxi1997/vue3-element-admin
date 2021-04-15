@@ -5,7 +5,7 @@
  * this type may be augmented via interface merging.
  */
 interface ImportMeta {
-  env : EnvVariables;
+  env: EnvVariables
 }
 
 /**

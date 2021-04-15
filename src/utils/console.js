@@ -1,4 +1,3 @@
-
 export const USE_CONSOLE = process.env.VUE_APP_USE_CONSOLE === 'true'
 
 export const LIGHT = {
@@ -11,5 +10,5 @@ export const INFO = {
 }
 
 export function useStyle(text) {
-  return `%c${ text }`
+  return `%c${text}`
 }

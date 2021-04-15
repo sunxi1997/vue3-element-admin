@@ -3,7 +3,7 @@
  * 路由表
  */
 
-import Layout from "layouts/index.vue";
+import Layout from 'layouts/index.vue'
 
 /**
  * Note: 子菜单仅当路由的children.length >= 1时才出现
@@ -24,17 +24,17 @@ import Layout from "layouts/index.vue";
  */
 const routes = [
   {
-    path: "/",
-    redirect: "/home",
+    path: '/',
+    redirect: '/home',
     component: Layout,
     children: [
       {
-        path: "home",
-        component: () => import("views/home.vue"),
-        name: "Home",
-        meta: { title: "首页", icon: "el-icon-s-home" },
-      },
-    ],
+        path: 'home',
+        component: () => import('views/home.vue'),
+        name: 'Home',
+        meta: { title: '首页', icon: 'el-icon-s-home' }
+      }
+    ]
   },
   /**
    * 通配符路由
@@ -42,5 +42,5 @@ const routes = [
    * 详见 https://next.router.vuejs.org/guide/migration/#removed-star-or-catch-all-routes
    */
   { path: '/:pathMatch(.*)*', redirect: '/', meta: { hidden: true } }
-];
-export default routes;
+]
+export default routes

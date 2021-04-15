@@ -1,11 +1,11 @@
-import { createStore } from "vuex";
+import { createStore } from 'vuex'
 
-import app from "@/store/modules/app";
+import app from '@/store/modules/app'
 
 const store = createStore({
   modules: {
-    app,
-  },
-});
+    app
+  }
+})
 
-export default store;
+export default store

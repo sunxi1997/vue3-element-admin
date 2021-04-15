@@ -1,28 +1,28 @@
 const state = {
-  sidebarOpened: false,
-};
+  sidebarOpened: false
+}
 
 const mutations = {
   TOGGLE_SIDEBAR: state => {
-    state.sidebarOpened = !state.sidebarOpened;
+    state.sidebarOpened = !state.sidebarOpened
   },
   CLOSE_SIDEBAR: state => {
-    state.sidebarOpened = false;
-  },
-};
+    state.sidebarOpened = false
+  }
+}
 
 const actions = {
   toggleSideBar({ commit }) {
-    commit("TOGGLE_SIDEBAR");
+    commit('TOGGLE_SIDEBAR')
   },
   closeSideBar({ commit }, { withoutAnimation }) {
-    commit("CLOSE_SIDEBAR", withoutAnimation);
-  },
-};
+    commit('CLOSE_SIDEBAR', withoutAnimation)
+  }
+}
 
 export default {
   namespaced: true,
   state,
   mutations,
-  actions,
-};
+  actions
+}
