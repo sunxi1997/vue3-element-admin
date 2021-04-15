@@ -88,7 +88,7 @@ export default defineComponent({
 
 @import "src/styles/variables.module.scss";
 
-.sidebar-item ::v-deep {
+::v-deep(.sidebar-item) {
   // menu hover
   .submenu-title-noDropdown, .el-submenu__title {
     &:hover {
